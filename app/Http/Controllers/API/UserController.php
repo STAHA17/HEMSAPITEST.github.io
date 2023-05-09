@@ -35,9 +35,10 @@ class UserController extends BaseController
             'name' => 'required',
             'email' => 'required',
             'password' => 'required',
-            'u_location' => 'required',
-            'u_login' => 'required',
-            'u_rights' => 'required',
+            'user_location' => 'required',
+            'start_time' => 'required',
+            'end_time' => 'required',
+            'duration' => 'required',
             'status' => 'required'
 
         ]);
@@ -83,9 +84,10 @@ class UserController extends BaseController
             'name' => 'required',
             'email' => 'required',
             'password' => 'required',
-            'u_location' => 'required',
-            'u_login' => 'required',
-            'u_rights' => 'required',
+            'user_location' => 'required',
+            'start_time' => 'required',
+            'end_time' => 'required',
+            'duration' => 'required',
             'status' => 'required'
         ]);
    
@@ -96,9 +98,10 @@ class UserController extends BaseController
         $user->name = $input['name'];
         $user->email = $input['email'];
         $user->password = $input['password'];
-        $user->u_location = $input['u_location'];
-        $user->u_login = $input['u_login'];
-        $user->u_rights = $input['u_rights'];
+        $user->user_location = $input['user_location'];
+        $user->start_time = $input['start_time'];
+        $user->end_time = $input['end_time'];
+        $user->duration = $input['duration'];
         $user->status = $input['status'];
 
         $user->save();

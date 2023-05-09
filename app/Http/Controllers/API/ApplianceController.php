@@ -32,10 +32,9 @@ class ApplianceController extends BaseController
         $input = $request->all();
    
         $validator = Validator::make($input, [
-            'a_name' => 'required',
-            'a_category' => 'required',
-            'a_watt' => 'required',
-            'a_consumption' => 'required',
+            'appliance_name' => 'required',
+            'appliance_wattage' => 'required',
+            'appliance_consumption' => 'required',
             // 'user_id' => 'required'
         ]);
    
@@ -77,20 +76,18 @@ class ApplianceController extends BaseController
         $input = $request->all();
    
         $validator = Validator::make($input, [
-            'a_name' => 'required',
-            'a_category' => 'required',
-            'a_watt' => 'required',
-            'a_consumption' => 'required'
+            'appliance_name' => 'required',
+            'appliance_wattage' => 'required',
+            'appliance_consumption' => 'required'
         ]);
    
         if($validator->fails()){
             return $this->sendError('Validation Error.', $validator->errors());       
         }
    
-        $appliance->a_name = $input['a_name'];
-        $appliance->a_category = $input['a_category'];
-        $appliance->a_watt = $input['a_watt'];
-        $appliance->a_consumption = $input['a_consumption'];
+        $appliance->appliance_name = $input['appliance_name'];
+        $appliance->appliance_wattage = $input['appliance_wattage'];
+        $appliance->appliance_consumption = $input['appliance_consumption'];
 
         $appliance->save();
    

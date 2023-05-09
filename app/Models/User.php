@@ -21,9 +21,10 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
-        'u_location',
-        'u_login',
-        'u_rights',
+        'user_location',
+        'start_time',
+        'end_time',
+        'duration',
         'status',
     ];
 

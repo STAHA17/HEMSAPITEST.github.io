@@ -20,9 +20,9 @@ class UserResource extends JsonResource
             'email' => $this->email,
             'password' => $this->password, 
             //U_location,Login,Rights & Status isn't insert (Problem) 
-            'u_location' => $this -> u_location,
-            'u_login' => $this -> u_login,
-            'u_rights' => $this -> u_rights,
+            'user_location' => $this -> user_location,
+            'start_time' => $this -> start_time,
+            'end_time' => $this -> end_time,
             'status' => $this -> status,
 
             'created_at' => $this->created_at->format('d/m/Y'),
