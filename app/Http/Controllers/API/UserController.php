@@ -36,8 +36,8 @@ class UserController extends BaseController
             'email' => 'required',
             'password' => 'required',
             'user_location' => 'required',
-            'start_time' => 'required',
-            'end_time' => 'required',
+            // 'start_time' => 'required',
+            // 'end_time' => 'required',
             'duration' => 'required',
             'status' => 'required'
 
@@ -85,8 +85,8 @@ class UserController extends BaseController
             'email' => 'required',
             'password' => 'required',
             'user_location' => 'required',
-            'start_time' => 'required',
-            'end_time' => 'required',
+            // 'start_time' => 'required',
+            // 'end_time' => 'required',
             'duration' => 'required',
             'status' => 'required'
         ]);
@@ -99,8 +99,8 @@ class UserController extends BaseController
         $user->email = $input['email'];
         $user->password = $input['password'];
         $user->user_location = $input['user_location'];
-        $user->start_time = $input['start_time'];
-        $user->end_time = $input['end_time'];
+        // $user->start_time = $input['start_time'];
+        // $user->end_time = $input['end_time'];
         $user->duration = $input['duration'];
         $user->status = $input['status'];
 

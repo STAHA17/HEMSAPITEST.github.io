@@ -4,7 +4,7 @@ namespace App\Http\Resources;
 
 use Illuminate\Http\Resources\Json\JsonResource;
 
-class UserResource extends JsonResource
+class SchedulingResource extends JsonResource
 {
     /**
      * Transform the resource into an array.
@@ -16,16 +16,13 @@ class UserResource extends JsonResource
     {
         return [
             'id' => $this->id,
-            'name' => $this->name,
-            'email' => $this->email,
-            'password' => $this->password, 
-            //U_location,Login,Rights & Status isn't insert (Problem) 
-            'user_location' => $this -> user_location,
-            // 'start_time' => $this -> start_time,
-            // 'end_time' => $this -> end_time,
-            'duration' => $this -> duration,
-            'status' => $this -> status,
-
+            'start_time' => $this->start_time,
+            'end_time' => $this->end_time,
+            'slot_1' => $this->slot_1,
+            'slot_2' => $this->slot_2, 
+            'slot_3' => $this -> slot_3,
+            'user_id' => $this->user_id,
+            
             'created_at' => $this->created_at->format('d/m/Y'),
             'updated_at' => $this->updated_at->format('d/m/Y'),
         ];

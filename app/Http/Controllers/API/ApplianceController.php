@@ -33,8 +33,10 @@ class ApplianceController extends BaseController
    
         $validator = Validator::make($input, [
             'appliance_name' => 'required',
-            'appliance_wattage' => 'required',
+            'appliance_wattage' => 'required | min:1 | max: 3500',
             'appliance_consumption' => 'required',
+            'start_time' => 'required',
+            'end_time' => 'required',
             // 'user_id' => 'required'
         ]);
    
@@ -78,7 +80,9 @@ class ApplianceController extends BaseController
         $validator = Validator::make($input, [
             'appliance_name' => 'required',
             'appliance_wattage' => 'required',
-            'appliance_consumption' => 'required'
+            'appliance_consumption' => 'required',
+            'start_time' => 'required',
+            'end_time' => 'required',
         ]);
    
         if($validator->fails()){
@@ -88,6 +92,9 @@ class ApplianceController extends BaseController
         $appliance->appliance_name = $input['appliance_name'];
         $appliance->appliance_wattage = $input['appliance_wattage'];
         $appliance->appliance_consumption = $input['appliance_consumption'];
+        $appliance->start_time = $input['start_time'];
+        $appliance->end_time = $input['end_time'];
+
 
         $appliance->save();
    
