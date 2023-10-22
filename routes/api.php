@@ -25,5 +25,9 @@ Route::middleware('auth:sanctum')->group( function () {
 Route::middleware('auth:sanctum')->group( function () {
     Route::resource('scheduling', SchedulingController::class);
 });
+
+Route::get('/demo-url',  function  (Request $request)  {
+    return response()->json(['Laravel CORS Demo']);
+});
   
   
