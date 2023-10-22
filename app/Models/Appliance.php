@@ -10,6 +10,6 @@ class Appliance extends Model
     use HasFactory;
 
     protected $fillable = [
-        'appliance_name','appliance_wattage','appliance_consumption','start_time','end_time','user_id'
+        'appliance_name','appliance_wattage','appliance_consumption','appliance_count','appliance_duration','start_time','end_time','user_id'
     ];
 }

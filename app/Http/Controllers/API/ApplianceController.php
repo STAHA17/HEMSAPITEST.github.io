@@ -35,6 +35,8 @@ class ApplianceController extends BaseController
             'appliance_name' => 'required',
             'appliance_wattage' => 'required | min:1 | max: 3500',
             'appliance_consumption' => 'required',
+            'appliance_count' => 'required',
+            'appliance_duration' => 'required',
             'start_time' => 'required',
             'end_time' => 'required',
             // 'user_id' => 'required'

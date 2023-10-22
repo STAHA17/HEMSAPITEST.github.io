@@ -18,6 +18,8 @@ class CreateAppliancesTable extends Migration
             $table->string('appliance_name');
             $table->integer('appliance_wattage');
             $table->integer('appliance_consumption');
+            $table->integer('appliance_count');
+            $table->integer('appliance_duration');
             $table->string('start_time')->nullable();
             $table->string('end_time')->nullable();
             $table->unsignedBigInteger('user_id')->nullable();
